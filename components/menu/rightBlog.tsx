@@ -5,7 +5,7 @@ import moment from "moment";
 export const revalidate = 60;
 
 interface RightBlogProps {
-  width?: string; // The '?' makes the width prop optional
+  width?: string;
 }
 
 export default async function RightBlog({ width }: RightBlogProps) {
