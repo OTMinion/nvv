@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.group:hover .chevron-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.group:hover .arrow-icon {
+  transform: rotate(-45deg);
+  transition: transform 0.4s ease-in-out;
+}
+
+.truncate-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Number of lines you want to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.truncate-news {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Number of lines you want to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* In your CSS file (global.css or a component-specific CSS module) */
+
+/* Global CSS file or Component-specific CSS Module */
+
+/* Increasing specificity by repeating the class */
+.slick-prev.slick-prev:before,
+.slick-next.slick-next:before {
+  color: #c33527; /* Replace with your desired color */
+}

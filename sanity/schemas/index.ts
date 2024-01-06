@@ -1,6 +1,6 @@
-import project from './project-schema'
-import page from "./page-schema"
+import project from "./project-schema";
+import menu from "./menu-schema";
 
-const schemas = [project, page];
+const schemas = [project, menu];
 
 export default schemas;

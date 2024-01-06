@@ -1,18 +1,50 @@
 import { createClient, groq } from "next-sanity";
 import { Project } from "@/types/Project";
 import clientConfig from "./config/client-config";
-import { Page } from "@/types/Page";
+import { Menu } from "@/types/Menu";
+
+export async function getMenu(): Promise<Menu[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "menu"]{
+      _id,
+      file{
+        asset->{
+          _id,
+          url
+        },
+        description,
+        transcript
+      }
+    }`
+  );
+}
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "project"]{
       _id,
       _createdAt,
+      createdAt,
+      category,
       name,
       "slug": slug.current,
       "image": image.asset->url,
       url,
-      content
+      content[] {
+        ...,
+        asset->{
+          _id,
+          url
+        }
+      },
+      file{
+        asset->{
+          _id,
+          url
+        },
+        description,
+        transcript
+      }
     }`
   );
 }
@@ -22,35 +54,27 @@ export async function getProject(slug: string): Promise<Project> {
     groq`*[_type == "project" && slug.current == $slug][0]{
       _id,
       _createdAt,
+      createdAt,
+      category,
       name,
       "slug": slug.current,
       "image": image.asset->url,
       url,
-      content
-    }`,
-    { slug }
-  );
-}
-
-export async function getPages(): Promise<Page[]> {
-  return createClient(clientConfig).fetch(
-    groq`*[_type == "page"]{
-      _id,
-      _createdAt,
-      title,
-      "slug": slug.current
-    }`
-  );
-}
-
-export async function getPage(slug: string): Promise<Page> {
-  return createClient(clientConfig).fetch(
-    groq`*[_type == "page" && slug.current == $slug][0]{
-      _id,
-      _createdAt,
-      title,
-      "slug": slug.current,
-      content
+      content[] {
+        ...,
+        asset->{
+          _id,
+          url
+        }
+      },
+      file{
+        asset->{
+          _id,
+          url
+        },
+        description,
+        transcript
+      }
     }`,
     { slug }
   );

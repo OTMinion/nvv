@@ -1,46 +1,41 @@
-import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import About from "@/components/home/about";
+import Industries from "@/components/home/industries";
+import Partner from "@/components/home/partner";
+import Blog from "@/components/home/blog";
+import Career from "@/components/home/career";
 
-export const revalidate = 60;
+export const revalidate = 0;
 
-export default async function Home() {
-  const projects = await getProjects();
-
+export default function Home() {
   return (
     <div>
-      <h1 className="text-7xl font-extrabold">
-        Hello I&apos;m
-        <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
-          {" "}
-          Kapehe!
-        </span>
-      </h1>
-      <p className="mt-3 text-xl text-gray-600">Aloha everyone! Check out my projects!</p>
-      <h2 className="mt-24 font-bold text-gray-700 text-3xl">My Projects</h2>
+      <div className="relative px-5">
+        <Image
+          src="/images/warehouse.jpg"
+          alt="home"
+          width={1920}
+          height={40}
+          className="brightness-75 h-[80vh] w-full object-cover"
+        />
 
-      <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <Link
-            href={`/projects/${project.slug}`}
-            key={project._id}
-            className="border-2 border-gray-500 rounded-lg p-1 hover:scale-105 hover:border-blue-500 transition"
-          >
-            {project.image && (
-              <Image
-                src={project.image}
-                alt={project.name}
-                width={750}
-                height={300}
-                className="object-cover rounded-lg border border-gray-500"
-              />
-            )}
-            <div className="mt-2 font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
-              {project.name}
-            </div>
-          </Link>
-        ))}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-7xl text-center shadow-lg w-full max-w-[90%] ">
+          <span>Let&apos;s discover how our</span>
+          <br />
+          <span>services will help you</span>
+
+          <br />
+
+          <Button variant="outline">Who We Are</Button>
+        </div>
       </div>
+
+      <About />
+      <Industries />
+      <Partner />
+      <Career />
+      <Blog />
     </div>
   );
 }
