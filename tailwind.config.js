@@ -12,6 +12,8 @@ module.exports = {
         customBlue: "#013D6A",
         customGray: "#F2F3F6",
         customRed: "#C33527",
+        customYellow: "#FF813A",
+        industryGray: "#E7E6E2",
       },
     },
   },

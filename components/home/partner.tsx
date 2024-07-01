@@ -55,7 +55,7 @@ const Partner = () => {
   ];
 
   return (
-    <div className="bg-customGray px-3 lg:px-32 pt-44 pb-60">
+    <div className="bg-customGray px-3 lg:px-32 pt-24 sm:pt-44 pb-44">
       <div className="flex flex-col lg:flex-row">
         <div className="flex flex-col w-full lg:w-2/5">
           <h1 className="text-4xl font-bold pb-5">Our partners are spread around the world</h1>
@@ -66,7 +66,7 @@ const Partner = () => {
 
           <Button>Contact Us</Button>
         </div>
-        <div className="w-full lg:w-3/5 lg:ml-5">
+        <div className="w-full lg:w-3/5 lg:ml-5 px-5">
           <Slider {...settings}>
             {images.map((src, index) => (
               <div key={index} className="h-52">

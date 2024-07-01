@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-customBlue text-gray-300 pt-12">
-      <div className="container mx-28 px-4">
+      <div className="container lg:mx-28 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Column 1 */}
           <div>
@@ -30,28 +30,28 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-blue-500 hover:underline">
+              <Link href="#" className="text-blue-500 hover:underline">
                 Facebook
-              </a>
-              <a href="#" className="text-blue-500 hover:underline">
+              </Link>
+              <Link href="#" className="text-blue-500 hover:underline">
                 Youtube
-              </a>
-              <a href="#" className="text-blue-500 hover:underline">
+              </Link>
+              <Link href="#" className="text-blue-500 hover:underline">
                 LinkedIn
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-customRed flex justify-between mt-12 px-28 py-4">
-        <div>
+      <div className="bg-customRed flex flex-col-reverse lg:flex-row justify-between mt-12 px-4 lg:px-28 py-4">
+        <div className=" lg:mt-0">
           <p>© 2023 Tập đoàn đầu tư và phát triển Nam Việt</p>
           <br />
           <p className="-mt-5">All Rights Reserved</p>
         </div>
 
-        <div className="flex gap-10 text-xl justify-center items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:flex-row gap-10 text-xl justify-center items-center ">
           <Link href="/" className="hover:text-customBlue transition duration-300">
             Home
           </Link>

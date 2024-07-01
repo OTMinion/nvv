@@ -31,7 +31,7 @@ export default async function Blog() {
 
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between">
-          <div className="w-[90%]">
+          <div className="w-[90%] hidden lg:block">
             {projects
               .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()) // Sort by createdAt in descending order
               .slice(0, 1)
@@ -75,7 +75,7 @@ export default async function Blog() {
           {/* vertical line */}
           <div className="hidden lg:block lg:w-px lg:bg-gray-700 lg:mx-10 lg:h-auto"></div>
 
-          <div className="flex flex-col w-[60%] space-y-5 ">
+          <div className="flex flex-col lg:w-[60%] space-y-5 ">
             {projects
               .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()) // Sort by createdAt in descending order
               .slice(1, 6)
@@ -87,7 +87,14 @@ export default async function Blog() {
                     </div>
                   </Link>
                   <div className="text-gray-500">
-                    {project.category} {moment(project.createdAt).format("MMMM D, YYYY")}
+                    <Link
+                      href={`/projects/${getCategorySlug(project.category)}`}
+                      key={project._id}
+                      className=" hover:text-customRed transition duration-300 pr-1"
+                    >
+                      {project.category}
+                    </Link>
+                    | {moment(project.createdAt).format("MMMM D, YYYY")}
                   </div>
 
                   <div className="h-px bg-gray-400 mt-4"></div>

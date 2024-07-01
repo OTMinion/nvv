@@ -11,9 +11,19 @@ interface RightBlogProps {
 export default async function RightBlog({ width }: RightBlogProps) {
   const projects = await getProjects();
 
-  // Define a default width if none is provided
-  const defaultWidth = "3000px"; // You can adjust this default value as needed
-  const componentWidth = width || defaultWidth;
+  const componentWidth = width;
+
+  const getCategorySlug = (category: string) => {
+    switch (category) {
+      case "Tin Noi Bo":
+        return "tin-noi-bo";
+      case "Tin Chuyen Nganh":
+        return "tin-chuyen-nganh";
+      // case "Tin Bao Chi":
+      //   return "tin-bao-chi";
+      // Default case if category doesn't match
+    }
+  };
 
   return (
     <div
@@ -32,7 +42,14 @@ export default async function RightBlog({ width }: RightBlogProps) {
               <div className="flex flex-col w-[59%]">
                 <p className="text-md font-bold">{project.name}</p>
                 <p className="text-sm text-gray-500 mt-4">
-                  {project.category} | {moment(project.createdAt).format("MM/DD/YYYY")}
+                  <Link
+                    href={`/projects/${getCategorySlug(project.category)}`}
+                    key={project._id}
+                    className=" hover:text-customRed transition duration-300 pr-1"
+                  >
+                    {project.category}
+                  </Link>
+                  | {moment(project.createdAt).format("MM/DD/YYYY")}
                 </p>
               </div>
 

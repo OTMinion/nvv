@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
 import { CiLocationOn } from "react-icons/ci";
@@ -6,32 +5,11 @@ import { CiLocationOn } from "react-icons/ci";
 const Career = () => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="bg-customGray w-full h-[18rem] flex items-center justify-center"></div>
-
-      <div className="w-[84%] absolute transform -translate-y-[55%]">
-        <Image
-          src="/images/founder.jpg"
-          width={1920}
-          height={1080}
-          alt="Descriptive Alt Text"
-          className="brightness-[0.95]"
-        />
-        <div className="absolute inset-0 flex justify-center w-[60%] pl-5 flex-col text-white">
-          <p className="text-5xl">&quot;&quot;</p>
-          <p className="text-white text-3xl font-bold">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis optio ullam quod atque cum, ipsam
-            delectus voluptate? Voluptates, quo eligendi cupiditate possimus, labore natus fuga impedit
-            aperiam dicta, voluptatum veniam.
-          </p>
-
-          <p className=" text-xl pt-10">Ong Ha Van An</p>
-          <p>Chu Tich Hoi Dong Quan Tri</p>
-        </div>
-      </div>
-
-      <div className="flex flex-col bg-customBlue w-full h-[68rem] items-center justify-center px-28 pt-[23rem] text-white">
-        <div className="flex ">
-          <h1 className=" text-5xl w-full font-bold">Get started a career in Industrial company</h1>
+      <div className="flex flex-col bg-customBlue w-full  items-center justify-center px-3 lg:px-28 py-10 lg:py-20 text-white">
+        <div className="flex flex-col lg:flex-row text-center gap-10">
+          <h1 className="text-3xl lg:text-5xl w-full font-bold">
+            Get started a career in Industrial company
+          </h1>
           <div className="flex flex-col">
             <p className="text-lg">
               We are constantly developing our plants and looking for new experienced people to work in our
@@ -43,7 +21,7 @@ const Career = () => {
 
         {/* Job posts */}
         <div className="flex flex-row mt-20">
-          <div className="flex flex-col lg:flex-row gap-20">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-20">
             <div className="flex flex-col space-y-10 border-white border-[0.5px] p-10">
               <div className="flex justify-between">
                 <p className="bg-gray-500 px-4 py-2">Full Time</p>
