@@ -1,4 +1,4 @@
-import "../../globals.css";
+import "../globals.css";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -11,6 +11,7 @@ import LanguageChanger from "@/components/LanguageChanger";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Menu from "@/components/menu/menu";
 import Footer from "@/components/home/footer";
+import Dropdown from "@/components/menu/dropDown";
 const locales = ["en", "vn"];
 
 export function generateStaticParams() {
@@ -22,7 +23,7 @@ export const metadata = {
   description: "Nam Viet Jsc",
 };
 
-export const revalidate = true;
+export const revalidate = 60;
 
 interface Props {
   children: React.ReactNode;
@@ -39,7 +40,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
   return (
     <html lang={locale}>
       <NextIntlClientProvider messages={messages}>
-        <body className="pt-2">
+        <body className="pt-2 overflow-x-hidden">
           <header className="text-customBlue">
             <div className="flex flex-col">
               <div className="border-t border-customBlue mb-4 w-[97%] mx-auto opacity-40" />
@@ -53,8 +54,11 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
                   <Menu />
                 </div>
 
-                <div>
+                <div className="flex space-x-12 justify-end">
                   <LanguageChanger />
+                  <div>
+                    <Dropdown />
+                  </div>
                 </div>
               </div>
 

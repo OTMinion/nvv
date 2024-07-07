@@ -1,22 +1,29 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import { FiArrowDownRight } from "react-icons/fi";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
-const industries = () => {
+const Industries = () => {
+  const pathname = usePathname();
+  const locale = pathname.split("/")[1];
+  const t = useTranslations("business");
   const businesses = [
     {
-      href: "/industries/nam_viet",
+      href: `/${locale}/industries/nam_viet`,
       image: "/images/companies/1.jpeg",
       title: "Nam Viet Jsc",
     },
     {
-      href: "/industries/pilmico",
+      href: `/${locale}/industries/pilmico`,
       image: "/images/companies/4.jpg",
       title: "Pilmico Group",
     },
     {
-      href: "/industries/logistics",
+      href: `/${locale}/industries/logistics`,
       image: "/images/companies/13.jpeg",
       title: "Logistics",
     },
@@ -24,7 +31,7 @@ const industries = () => {
 
   return (
     <div className="bg-customGray mt-10">
-      <h1 className="text-5xl font-bold py-16 pl-4 md:pl-32">Our Businesses</h1>
+      <h1 className="text-5xl font-bold py-16 pl-4 md:pl-32">{t("1")}</h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 xl:gap-32 gap-4 mx-4 md:mx-32 ">
         {businesses.map((business, index) => (
           <Link
@@ -47,12 +54,12 @@ const industries = () => {
           </Link>
         ))}
 
-        <Link href={"/industries"} className="text-center  md:hidden">
-          See more
+        <Link href={`/${locale}/industries`} className="text-center  md:hidden">
+          {t("2")}
         </Link>
 
         <Link
-          href={"/industries"}
+          href={`/${locale}/industries`}
           className="relative w-[10rem] h-32 md:h-96 overflow-hidden cursor-pointer hidden sm:block"
         >
           <div className="absolute w-full h-full  flex items-center justify-center">
@@ -62,7 +69,7 @@ const industries = () => {
                 size={60}
               />
               <span className="absolute right-full text-black text-xl opacity-0 group-hover:translate-x-[150%] group-hover:opacity-100 transition-all duration-500 whitespace-nowrap">
-                See More
+                {t("2")}
               </span>
             </div>
           </div>
@@ -72,4 +79,4 @@ const industries = () => {
   );
 };
 
-export default industries;
+export default Industries;

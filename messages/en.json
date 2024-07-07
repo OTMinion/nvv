@@ -1,5 +1,131 @@
 {
   "Index": {
     "title": "Hello world!"
+  },
+  "nav": {
+    "about": "About us",
+    "home": "Home",
+    "contact": "Contact",
+    "news": "News",
+    "industries": "Industries",
+    "career": "Career",
+    "1": "Nam Viet Corporation",
+    "2": "Pilmico Group Corporation",
+    "3": "Veronesi Group Corporation",
+    "4": "Nam Viet Logistics Corporation",
+    "5": "Petrol Station No. 1",
+    "6": "Feed Trading Limited Company",
+    "7": "Thai Nguyen Agricultural Construction and Rural Development Corporation",
+    "8": "Nam Viet Tourism and Trade Development Corporation",
+    "9": "Nam Viet Quang Ninh Port Warehouse",
+    "10": "Vapco International Production and Trading Company Limited"
+  },
+  "hero": {
+    "1": "We are the leader in",
+    "2": "industrial services",
+    "3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni exercitationem nam quibusdam maioresiste molestiae qui repellat magnam excepturi eius?",
+    "4": "About Us",
+    "5": "projects",
+    "6": "years",
+    "7": "employees",
+    "8": "Years of experience",
+    "9": "Let's discover how our",
+    "10": "services can help you",
+    "11": "About Us"
+  },
+  "business": {
+    "1": "Our Businesses",
+    "2": "See more"
+  },
+  "partner": {
+    "1": "Our partners are spread around the world",
+    "2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus praesentium molestiae,dolor blanditiis veniam a placeat mollitia quidem dolores?",
+    "3": "Contact Us"
+  },
+  "career": {
+    "1": "Get started a career in Industrial company",
+    "2": "We are constantly developing our plants and looking for new experienced people to work in ourfactories. The list of current offers is available below.",
+    "3": "View All"
+  },
+  "news": {
+    "1": "News",
+    "2": "View All"
+  },
+  "footer": {
+    "1": "NAM VIET INVESTMENT AND DEVELOPMENT GROUP",
+    "2": "We are committed to providing high-quality agricultural products and services to support the growth and development of the agricultural sector.",
+    "3": "Branches",
+    "4": "Quang Ninh Branch: Cai Lan Industrial Park, Bai Chay, Ha Long, Quang Ninh",
+    "5": "Hanoi Branch",
+    "6": "Phu Quoc Branch",
+    "7": "@2023 Nam Viet Investment and Development Group"
+  },
+
+  "about": {
+    "1": "Start",
+    "2": "Signing contract with major investor",
+    "3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+    "4": "Recognition in the market",
+    "5": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+    "6": "Increasing our team",
+    "7": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+    "8": "Opening of a new office",
+    "9": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+    "10": "Opening of new capacities",
+    "11": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+    "12": "The best in the industry market",
+    "13": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+    "14": "Home",
+    "15": "About Nam Viet",
+    "16": "About Nam Viet",
+    "17": "Company history at a glance",
+    "18": "Nam Viet Investment and Development Group is one of the multi-industry groups, operating and developing in many fields with a total charter capital of 542,000,000,000 VND. With 10 member companies including: Nam Viet Corporation; Pilmico Group Corporation; Veronesi Group Investment Corporation; Nam Viet Logistics Trading Corporation; Petrol Station No. 1 Nam Viet Corporation; Thai Nguyen Agricultural Construction and Rural Development Corporation; Nam Viet Tourism and Trade Development Corporation; Nam Viet Corporation's Quang Ninh Port Warehouse Branch; Feed Trading Vietnam Limited Company; Vapco International Production and Trading Company Limited",
+    "19": "At Nam Viet, we're committed to sustainable agriculture. We balance stakeholder interests while prioritizing environmental protection. Our company leads in developing eco-friendly farming solutions that enhance food security and rural economic growth. We're dedicated to creating lasting value for our customers, partners, and society through sustainable practices.",
+    "20": "Mr. Ha Van An",
+    "21": "Chairman of the Board",
+    "bld": "Board of Directors",
+    "22": "Deputy General Director",
+    "23": "Chief Accountant",
+    "24": "Director of Feed Trading Vietnam Co., Ltd",
+    "25": "Director of Cai Lan Port Warehouse",
+    "26": "Experienced leader in the agricultural industry.",
+    "27": "Oversees financial operations of the company.",
+    "28": "Director of Pilmico Group Corporation",
+    "29": "Director of Nam Viet Tourism and Trade Services Company",
+    "30": "Assistant to General Director of Nam Viet Corporation",
+    "31": "Director of Thai Nguyen Agricultural Construction and Rural Development Corporation",
+    "32": "Director of Nam Viet Joint Venture Co., Ltd",
+    "33": "Manages international partnerships and collaborations.",
+    "34": "Now"
+  },
+  "industries": {
+    "1": "Nam Viet Corporation, located at Residential Quarter 2A, Pho Co Ward, Song Cong City, Thai Nguyen Province, Vietnam. Tax code: 4600305924. Main business activities are production and wholesale of animal feed and raw materials for livestock and poultry.",
+    "2": "Pilmico Group Corporation, located in Trung Hamlet, Diem Thuy Commune, Phu Binh District, Thai Nguyen Province, Vietnam. Tax code 4601209684. Main business activities are production and wholesale of animal feed and raw materials for livestock and poultry, warehousing services, and logistics.",
+    "3": "Veronesi Group Investment Corporation, located at Hiep Dong Residential Quarter, Hong Tien Ward, Pho Yen City, Thai Nguyen Province, Vietnam. Tax code 4601572753. Main business activities are production and wholesale of animal feed and raw materials for livestock and poultry.",
+    "4": "Nam Viet Logistics Trading Corporation, located at Group 9, Hoang Van Thu Ward, Thai Nguyen City, Thai Nguyen Province, Vietnam. Tax code 4601599762. Main business activities are consulting services for FDI investment in Vietnam, warehousing services, factory facilities for FDI and domestic investors, and international freight services.",
+    "5": "Petrol Station No. 1 Nam Viet Corporation, located at Group 1, Dong Bam Ward, Thai Nguyen City, Thai Nguyen Province, Vietnam. Tax code 4600305924-001. Main business activity is retail sale of petrol and oil.",
+    "6": "Feed Trading Vietnam Limited Company, located at Villa No. 15 - BT1 Co Nhue - Xuan Dinh New Urban Area, Co Nhue 2 Ward, Bac Tu Liem District, Hanoi City, Vietnam. Tax code 0106173059. Main business activities are import of raw materials and transportation services.",
+    "7": "Thai Nguyen Agricultural Construction and Rural Development Corporation, located at Group 15, Quang Trung Ward, Thai Nguyen City, Thai Nguyen Province, Vietnam. Tax code 4600105971. Main business activities are construction of infrastructure for agricultural and rural development, construction of clean farm models, urban infrastructure, housing, commercial buildings, and rental housing.",
+    "8": "Nam Viet Tourism and Trade Development Corporation, located at Group 11, Hoang Van Thu Ward, Thai Nguyen City, Thai Nguyen Province, Vietnam. Tax code 4601588418. Main business activities are short-term accommodation services, food and beverage, event organization, conferences, spa, and health care services.",
+    "9": "Nam Viet Corporation's Quang Ninh Port Warehouse Branch, located at Cai Lan Industrial Park, Bai Chay Ward, Ha Long City, Quang Ninh Province, Vietnam. Tax code 4600305924-002. Main business activities are warehousing and storage services, loading and unloading, container handling, and international cargo insurance.",
+    "10": "Vapco International Production and Trading Company Limited, located at Lot CN 9, Diem Thuy Industrial Park, Diem Thuy Commune, Phu Binh District, Thai Nguyen Province. Main business activities are cloud-based inventory management solutions, consulting services for FDI companies, factory facilities, and services."
+  },
+  "projects": {
+    "1": "Home",
+    "2": "News",
+    "3": "Industry News",
+    "4": "View all",
+    "5": "Internal News",
+    "6": "Latest News",
+    "7": "Thai Nguyen Agricultural Construction and Rural Development Corporation",
+    "8": "Nam Viet Tourism and Trade Development Corporation",
+    "9": "Nam Viet Quang Ninh Port Warehouse",
+    "10": "Vapco International Production and Trading Company Limited"
+  },
+  "contacts": {
+    "1": "Home",
+    "2": "Contact",
+    "3": "Connect with Nam Viet",
+    "4": "Send us a message for answers to all your questions about Nam Viet's products and services"
   }
 }

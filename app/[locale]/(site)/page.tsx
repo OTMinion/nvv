@@ -8,7 +8,7 @@ import Career from "@/components/home/career";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 interface Props {
   params: {
@@ -18,7 +18,7 @@ interface Props {
 
 export default function IndexPage({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
-  const t = useTranslations("Index");
+  const t = useTranslations("hero");
   return (
     <div>
       <div className="relative px-5">
@@ -31,13 +31,13 @@ export default function IndexPage({ params: { locale } }: Props) {
         />
 
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl md:text-7xl text-center shadow-lg w-full max-w-[90%] ">
-          <span>Let&apos;s discover how our</span>
+          <span>{t("9")}</span>
           <br />
-          <span>{t("title")}</span>
+          <span>{t("10")}</span>
 
           <br />
 
-          <Button variant="outline">Who We Are</Button>
+          <Button variant="outline">{t("11")}</Button>
         </div>
       </div>
 

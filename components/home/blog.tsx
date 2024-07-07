@@ -1,12 +1,19 @@
 import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../ui/button";
+
 import { PortableText } from "@portabletext/react";
 import moment from "moment";
+import BlogClient from "./blogClient";
 
-export default async function Blog() {
+type BlogProps = {
+  params?: { locale: string };
+  locale?: string;
+};
+
+export default async function Blog({ params, locale: propLocale }: BlogProps) {
   const projects = await getProjects();
+  const locale = params?.locale || propLocale || "vn";
 
   const getCategorySlug = (category: string) => {
     switch (category) {
@@ -22,12 +29,7 @@ export default async function Blog() {
 
   return (
     <div className="flex flex-col mx-6 lg:mx-32 mb-16">
-      <div className="flex justify-between py-10">
-        <h1 className="text-5xl font-bold">News</h1>
-        <Button>
-          <Link href={`/projects`}>View All</Link>
-        </Button>
-      </div>
+      <BlogClient />
 
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between">
@@ -47,7 +49,7 @@ export default async function Blog() {
                     />
                   )}
                   <div>
-                    <Link href={`/projects/${project.slug}`} key={project._id}>
+                    <Link href={`/${locale}/projects/${project.slug}`} key={project._id}>
                       <div className="my-4 font-bold text-4xl  hover:text-customRed transition duration-300">
                         {project.name}
                       </div>
@@ -55,9 +57,9 @@ export default async function Blog() {
 
                     <div className="text-gray-500 flex">
                       <Link
-                        href={`/projects/${getCategorySlug(project.category)}`}
+                        href={`/${locale}/projects/${getCategorySlug(project.category)}`}
                         key={project._id}
-                        className=" hover:text-customRed transition duration-300 pr-1"
+                        className="hover:text-customRed transition duration-300 pr-1"
                       >
                         {project.category}
                       </Link>
@@ -81,14 +83,14 @@ export default async function Blog() {
               .slice(1, 6)
               .map((project) => (
                 <div key={project._id}>
-                  <Link href={`/projects/${project.slug}`}>
+                  <Link href={`/${locale}/projects/${project.slug}`}>
                     <div className="my-2 font-extrabold text-xl hover:text-customRed transition duration-300">
                       {project.name}
                     </div>
                   </Link>
                   <div className="text-gray-500">
                     <Link
-                      href={`/projects/${getCategorySlug(project.category)}`}
+                      href={`/${locale}/projects/${getCategorySlug(project.category)}`}
                       key={project._id}
                       className=" hover:text-customRed transition duration-300 pr-1"
                     >

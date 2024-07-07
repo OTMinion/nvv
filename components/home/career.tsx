@@ -1,21 +1,17 @@
 import React from "react";
 import { Button } from "../ui/button";
 import { CiLocationOn } from "react-icons/ci";
-
+import { useTranslations } from "next-intl";
 const Career = () => {
+  const t = useTranslations("career");
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex flex-col bg-customBlue w-full  items-center justify-center px-3 lg:px-28 py-10 lg:py-20 text-white">
         <div className="flex flex-col lg:flex-row text-center gap-10">
-          <h1 className="text-3xl lg:text-5xl w-full font-bold">
-            Get started a career in Industrial company
-          </h1>
+          <h1 className="text-3xl lg:text-5xl w-full font-bold">{t("1")}</h1>
           <div className="flex flex-col">
-            <p className="text-lg">
-              We are constantly developing our plants and looking for new experienced people to work in our
-              factories. The list of current offers is available below.
-            </p>
-            <Button>View All</Button>
+            <p className="text-lg">{t("2")}</p>
+            <Button>{t("3")}</Button>
           </div>
         </div>
 

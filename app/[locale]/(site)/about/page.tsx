@@ -5,8 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaCircle } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 const Page = () => {
+  const t = useTranslations("about");
   // State to track the selected year and image
   const [selectedYear, setSelectedYear] = useState("Start");
   const [imageSrc, setImageSrc] = useState("/images/base.jpg"); // Replace with your default image path
@@ -14,57 +16,51 @@ const Page = () => {
   // Define your timeline events and associated images
   const timelineEvents = [
     {
-      year: "Start",
+      year: t("1"),
       position: "0%",
       imgSrc: "/images/base.jpg",
-      title: "Signing contract with major investor",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+      title: t("2"),
+      content: t("3"),
     },
     {
       year: "1998",
       position: "20%",
       imgSrc: "/images/coffee.jpg",
-      title: "Recognition in the market",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+      title: t("4"),
+      content: t("5"),
     },
     {
       year: "2005",
       position: "40%",
       imgSrc: "/images/base.jpg",
-      title: "Increasing our team",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+      title: t("6"),
+      content: t("7"),
     },
     {
       year: "2009",
       position: "60%",
       imgSrc: "/images/coffee.jpg",
-      title: "Opening of a new office",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+      title: t("8"),
+      content: t("9"),
     },
     {
       year: "2015",
       position: "80%",
       imgSrc: "/images/base.jpg",
-      title: "Opening of new capacities",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+      title: t("10"),
+      content: t("11"),
     },
     {
-      year: "Now",
+      year: t("34"),
       position: "100%",
       imgSrc: "/images/coffee.jpg",
-      title: "The best in the industry market",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+      title: t("12"),
+      content: t("13"),
     },
   ];
 
   // Handler for when a year or circle is clicked
-  const handleYearClick = (year, imgSrc) => {
+  const handleYearClick = (year: string, imgSrc: string) => {
     setSelectedYear(year);
     setImageSrc(imgSrc);
   };
@@ -89,12 +85,12 @@ const Page = () => {
               href="/"
               className="hover:text-customRed cursor-pointer transition duration-300 text-sm md:text-base"
             >
-              Trang chu
+              {t("14")}
             </Link>
             <div className="w-px bg-white mx-3 " />
-            <p className="text-sm md:text-base">Gioi thieu Nam Viet</p>
+            <p className="text-sm md:text-base">{t("15")}</p>
           </div>
-          <span className="text-white text-3xl md:text-6xl font-bold pb-10 pt-5">Giới thiệu Nam Viet</span>
+          <span className="text-white text-3xl md:text-6xl font-bold pb-10 pt-5">{t("16")}</span>
         </div>
       </div>
 
@@ -103,16 +99,8 @@ const Page = () => {
       {/* Development */}
       <div className="flex flex-col my-10">
         <div className="text-center space-y-6 mb-6">
-          <h1 className="text-2xl md:text-5xl font-bold">Company history at a glance</h1>
-          <p className="text-base md:text-xl px-4 md:px-20 leading-10">
-            Tập đoàn đầu tư và phát triển Nam Việt là một trong những tập đoàn đa ngành nghề, hoạt động và
-            phát triển trong nhiều lĩnh vực với tổng vốn điều lệ 542.000.000.000đ. Với 10 công ty thành viên
-            bao gồm: Công ty cổ phần Nam Việt; Công ty cổ phần Pilmico group; Công ty cổ phần đầu tư Veronesi
-            group; Công ty cổ phần thương mại LOGISTICS Nam Việt; Cửa hàng xăng dầu số 1 Công ty cổ phần Nam
-            Việt; Công ty cổ phần xây dựng nông nghiệp và phát triển nông thôn Thái Nguyên; Công ty cổ phần
-            phát triển thương mại du lịch Nam Việt; Chi nhánh kho cảng Công ty cổ phần Nam Việt tại Quảng
-            Ninh; Công ty TNHH Feed Trading Việt Nam; Công ty TNHH sản xuất và thương mại Quốc tế Vapco
-          </p>
+          <h1 className="text-2xl md:text-5xl font-bold">{t("17")}</h1>
+          <p className="text-base md:text-xl px-4 md:px-20 leading-10">{t("18")}</p>
         </div>
         <div className="flex flex-col items-center my-10">
           <div className="flex items-center w-full py-8 ">
@@ -126,7 +114,7 @@ const Page = () => {
                   onClick={() => handleYearClick(event.year, event.imgSrc)}
                 >
                   <span
-                    className={`absolute -top-12 left-1/2 transform -translate-x-1/2 text-xl md:text-2xl ${
+                    className={`absolute -top-12 left-1/2 transform -translate-x-1/2 text-lg md:text-2xl whitespace-nowrap ${
                       selectedYear === event.year ? "text-customYellow" : "text-black"
                     }`}
                   >
@@ -161,17 +149,14 @@ const Page = () => {
             width={1920}
             height={1080}
             alt="Descriptive Alt Text"
-            className="brightness-[0.95] "
+            className="brightness-[0.95] object-cover h-80 lg:h-full"
           />
           <div className="absolute inset-0 flex justify-center w-[60%] pl-5 flex-col text-white">
-            <p className="text-base lg:text-8xl">&quot;&quot;</p>
-            <p className="text-white text-sm md:text-4xl font-bold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis optio ullam quod atque cum, ipsam
-              delectus voluptate?
-            </p>
+            <p className="text-lg lg:text-6xl">&quot;&quot;</p>
+            <p className="text-white text-xs md:text-3xl font-bold">{t("19")}</p>
 
-            <p className="text-sm lg:text-2xl pt-10">Ong Ha Van An</p>
-            <p className="text-sm ">Chu Tich Hoi Dong Quan Tri</p>
+            <p className="text-sm lg:text-2xl pt-10">{t("20")}</p>
+            <p className="text-sm lg:text-base ">{t("21")}</p>
           </div>
         </div>
       </div>
@@ -179,40 +164,40 @@ const Page = () => {
       {/* Management tree */}
       <div className="bg-customGray ">
         <div className="mx-4 lg:mx-20 pb-20">
-          <p className="text-4xl font-bold mb-5 pt-28">Ban Lanh Dao</p>
+          <p className="text-4xl font-bold mb-5 pt-28">{t("bld")}</p>
           <div className="h-px bg-gray-300" />
 
           <div className="flex flex-col items-center my-5">
             <Image src="/images/team/5.jpg" alt="team" width={1920} height={1080} className="h-72 w-56" />
-            <p className="font-bold text-lg mt-2"> HÀ VĂN AN</p>
-            <p>Chủ tịch HĐQT</p>
+            <p className="font-bold text-lg mt-2"> {t("20")}</p>
+            <p>{t("21")}</p>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 lg:mx-16">
             <div className="flex flex-col items-center">
               <Image src="/images/team/1.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
               <p className="font-bold text-lg mt-2">NGUYỄN THỊ NỤ</p>
-              <p>Phó Tổng giám đốc</p>
+              <p>{t("22")}</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src="/images/team/2.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
               <p className="font-bold text-lg mt-2"> HOÀNG THANH PHONG</p>
-              <p>Kế toán trưởng</p>
+              <p>{t("23")}</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src="/images/team/3.jpg" alt="team" width={1920} height={1080} className="h-72 w-56" />
               <p className="font-bold text-lg mt-2"> NGUYỄN ĐỨC HÙNG</p>
-              <p className="text-center">GĐ CT TNHH Feed trading Việt Nam</p>
+              <p className="text-center">{t("24")}</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src="/images/team/4.jpg" alt="team" width={1920} height={1080} className="h-72 w-48" />
               <p className="font-bold text-lg mt-2"> NGUYỄN VĂN HÙNG</p>
-              <p>Giám đốc kho cảng Cái Lân</p>
+              <p>{t("25")}</p>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center text-center">
               <Image src="/images/team/6.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
               <p className="font-bold text-lg mt-2">Lorem, ipsum dolor.</p>
-              <p>Lorem ipsum dolor .</p>
+              <p>{t("26")}</p>
             </div>
           </div>
 
@@ -220,32 +205,32 @@ const Page = () => {
             <div className="flex flex-col items-center">
               <Image src="/images/team/7.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
               <p className="font-bold text-lg mt-2"> NGUYỄN VĂN ĐÍCH</p>
-              <p className="text-center">Giám đốc CTCP Pilmico Group</p>
+              <p className="text-center">{t("27")}</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src="/images/team/8.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
               <p className="font-bold text-lg mt-2"> HÀ VĂN HƯỞNG</p>
-              <p className="text-center">Giám đốc CT TMDV&DL Nam Việt</p>
+              <p className="text-center">{t("28")}</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src="/images/team/9.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
               <p className="font-bold text-lg mt-2"> NGUYỄN MẠNH HÀ</p>
-              <p className="text-center">Trợ Lý Tổng GĐ CTCP Nam Việt</p>
+              <p className="text-center">{t("29")}</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src="/images/team/10.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
               <p className="font-bold text-lg mt-2"> LÊ VĂN MIÊN</p>
-              <p className="text-center">GĐ CTCP XD&PTNT Thái Nguyên</p>
+              <p className="text-center">{t("30")}</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src="/images/team/11.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
               <p className="font-bold text-lg mt-2"> PHẠM VĂN DŨNG</p>
-              <p className="text-center">GĐ TNHH LD Nam Việt</p>
+              <p className="text-center">{t("31")}</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src="/images/team/12.jpg" alt="team" width={1920} height={1080} className="h-72 w-48" />
-              <p className="font-bold text-lg mt-2"> Ha Van An</p>
-              <p className="text-center">Chu Tich HDQT</p>
+              <p className="font-bold text-lg mt-2">Nguyễn Mạnh Hải</p>
+              <p className="text-center">{t("32")}</p>
             </div>
           </div>
         </div>

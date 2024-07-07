@@ -5,8 +5,10 @@ import { Button } from "../ui/button";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const Partner = () => {
+  const t = useTranslations("partner");
   const settings = {
     dots: true,
     infinite: true,
@@ -58,13 +60,10 @@ const Partner = () => {
     <div className="bg-customGray px-3 lg:px-32 pt-24 sm:pt-44 pb-44">
       <div className="flex flex-col lg:flex-row">
         <div className="flex flex-col w-full lg:w-2/5">
-          <h1 className="text-4xl font-bold pb-5">Our partners are spread around the world</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus praesentium molestiae,
-            dolor blanditiis veniam a placeat mollitia quidem dolores?
-          </p>
+          <h1 className="text-4xl font-bold pb-5">{t("1")}</h1>
+          <p>{t("2")}</p>
 
-          <Button>Contact Us</Button>
+          <Button>{t("3")}</Button>
         </div>
         <div className="w-full lg:w-3/5 lg:ml-5 px-5">
           <Slider {...settings}>

@@ -29,7 +29,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "components/home/blogexample",
-    "app/projects/tin-noi-bo"
+    "app/[locale]/projects/tin-noi-bo"
   ],
   "exclude": ["node_modules"]
 }

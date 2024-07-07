@@ -1,5 +1,131 @@
 {
   "Index": {
-    "title": "hello bitches"
+    "title": "Xin chào thế giới!"
+  },
+  "nav": {
+    "about": "Giới thiệu",
+    "home": "Trang chủ",
+    "contact": "Liên hệ",
+    "news": "Tin tức",
+    "industries": "Lĩnh vực",
+    "career": "Nghề nghiệp",
+    "1": "CTCP Nam Viet",
+    "2": "CTCP Pilmico Group",
+    "3": "CTCP Veronesi Group",
+    "4": "CTCP Logistics Nam Viet",
+    "5": "Cửa hàng xăng dầu số 1",
+    "6": "Công ty TNHH Feed Trading",
+    "7": "CTCP xây dựng nông nghiệp và phát triển nông thôn Thái Nguyên",
+    "8": "CTCP phát triển thương mại du lịch Nam Việt",
+    "9": "Kho cảng CTCP Nam Việt Quảng Ninh",
+    "10": "Công ty TNHH sản xuất và thương mại Quốc tế Vapco"
+  },
+  "hero": {
+    "1": "Chúng tôi là nhà lãnh đạo trong",
+    "2": "dịch vụ công nghiệp",
+    "3": "Chúng tôi cung cấp các dịch vụ công nghiệp chất lượng cao, đáp ứng nhu cầu đa dạng của khách hàng với sự chuyên nghiệp và hiệu quả.",
+    "4": "Về chúng tôi",
+    "5": "dự án",
+    "6": "năm",
+    "7": "nhân viên",
+    "8": "Năm kinh nghiệm",
+    "9": "Hãy khám phá cách",
+    "10": "dịch vụ của chúng tôi có thể giúp bạn",
+    "11": "Giới thiệu"
+  },
+  "business": {
+    "1": "Lĩnh vực kinh doanh của chúng tôi",
+    "2": "Xem thêm"
+  },
+  "partner": {
+    "1": "Đối tác của chúng tôi trải rộng khắp thế giới",
+    "2": "Chúng tôi hợp tác với nhiều đối tác quốc tế để mang đến những giải pháp nông nghiệp tốt nhất cho khách hàng.",
+    "3": "Liên hệ với chúng tôi"
+  },
+  "career": {
+    "1": "Bắt đầu sự nghiệp tại công ty công nghiệp",
+    "2": "Chúng tôi liên tục phát triển các nhà máy và tìm kiếm những người có kinh nghiệm mới để làm việc tại các nhà máy của chúng tôi. Danh sách các vị trí hiện tại có sẵn bên dưới.",
+    "3": "Xem tất cả"
+  },
+  "news": {
+    "1": "Tin tức",
+    "2": "Xem tất cả"
+  },
+  "footer": {
+    "1": "TẬP ĐOÀN ĐẦU TƯ PHÁT TRIỂN NAM VIỆT",
+    "2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sedcursus ante dapibus diam. Sed nisi.",
+    "3": "Chi nhánh",
+    "4": "Chi nhánh Quảng Ninh Khu công nghiệp Cái Lân, Bãi Cháy, Hạ Long, Quảng Ninh",
+    "5": "Chi nhánh Hà Nội",
+    "6": "Chi nhánh Phú Quốc",
+    "7": "© 2023 Tập đoàn đầu tư và phát triển Nam Việt"
+  },
+  "about": {
+    "1": "Bắt đầu",
+    "2": "Ký hợp đồng với nhà đầu tư lớn",
+    "3": "Chúng tôi đã ký kết hợp đồng với một nhà đầu tư lớn, mở ra cơ hội phát triển mới cho công ty.",
+    "4": "Được công nhận trên thị trường",
+    "5": "Công ty chúng tôi đã đạt được sự công nhận trên thị trường nhờ vào chất lượng sản phẩm và dịch vụ.",
+    "6": "Mở rộng đội ngũ",
+    "7": "Chúng tôi đã mở rộng đội ngũ nhân viên để đáp ứng nhu cầu phát triển của công ty.",
+    "8": "Khai trương văn phòng mới",
+    "9": "Chúng tôi đã khai trương văn phòng mới để phục vụ khách hàng tốt hơn.",
+    "10": "Mở rộng năng lực sản xuất",
+    "11": "Chúng tôi đã đầu tư vào việc mở rộng năng lực sản xuất để đáp ứng nhu cầu ngày càng tăng.",
+    "12": "Dẫn đầu trong thị trường ngành",
+    "13": "Chúng tôi tự hào là công ty dẫn đầu trong thị trường ngành công nghiệp của mình.",
+    "14": "Trang chu",
+    "15": "Gioi thieu Nam Viet",
+    "16": "Giới thiệu Nam Viet",
+    "17": "Lịch sử công ty qua các giai đoạn",
+    "18": "Tập đoàn đầu tư và phát triển Nam Việt là một trong những tập đoàn đa ngành nghề, hoạt động vàphát triển trong nhiều lĩnh vực với tổng vốn điều lệ 542.000.000.000đ. Với 10 công ty thành viênbao gồm: Công ty cổ phần Nam Việt; Công ty cổ phần Pilmico group; Công ty cổ phần đầu tư Veronesi group; Công ty cổ phần thương mại LOGISTICS Nam Việt; Cửa hàng xăng dầu số 1 Công ty cổ phần NamViệt; Công ty cổ phần xây dựng nông nghiệp và phát triển nông thôn Thái Nguyên; Công ty cổ phần phát triển thương mại du lịch Nam Việt; Chi nhánh kho cảng Công ty cổ phần Nam Việt tại Quảng Ninh; Công ty TNHH Feed Trading Việt Nam; Công ty TNHH sản xuất và thương mại Quốc tế Vapco",
+    "19": "Tại Nam Việt, chúng tôi cam kết phát triển nông nghiệp bền vững. Chúng tôi cân bằng lợi ích các bên liên quan đồng thời ưu tiên bảo vệ môi trường. Công ty chúng tôi đi đầu trong phát triển giải pháp canh tác thân thiện môi trường, tăng cường an ninh lương thực và tăng trưởng kinh tế nông thôn. Chúng tôi tận tâm tạo ra giá trị lâu dài cho khách hàng, đối tác và xã hội thông qua các phương pháp bền vững.",
+    "20": "Ong Ha Van An",
+    "21": "Chu Tich HDQT",
+    "bld": "Ban Lãnh Đạo",
+    "22": "Phó Tổng giám đốc",
+    "23": "Kế toán trưởng",
+    "24": "GĐ CT TNHH Feed trading Việt Nam",
+    "25": "Giám đốc kho cảng Cái Lân",
+    "26": "Lorem ipsum dolor .",
+    "27": "Lorem ipsum dolor .",
+    "28": "Giám đốc CTCP Pilmico Group",
+    "29": "Giám đốc CT TMDV&DL Nam Việt",
+    "30": "Trợ Lý Tổng GĐ CTCP Nam Việt",
+    "31": "GĐ CTCP XD&PTNT Thái Nguyên",
+    "32": "GĐ TNHH LD Nam Việt",
+    "33": "Lorem ipsum dolor. ",
+    "34": "Hiện tại"
+  },
+
+  "industries": {
+    "1": "Công ty cổ phần Nam Việt, có địa chỉ tại Tổ dân phố 2A, phường Phố Cò, thành phố Sông Công, tỉnh TháiNguyên, Việt Nam. Mã số thuế: 4600305924 Lĩnh vực hoạt động chính là sản xuất và bán buôn thức ăn và nguyên liệu làm thức gia súc, gia cầm",
+    "2": "Công ty cổ phần Pilmico group, có địa chỉ tại xóm Trung, xã Điềm Thụy, huyện Phú Bình, tỉnh TháiNguyên, Việt Nam. Mã số thuế 4601209684 Lĩnh vực hoạt động chính là sản xuất và bán buôn thức ăn vànguyên liệu làm thức gia súc, gia cầm, dịch vụ kho bãi, logistics.",
+    "3": "Công ty cổ phần đầu tư Veronesi group, có địa chỉ tại Tổ dân phố Hiệp Đồng, Phường Hồng Tiến, thànhphố Phổ Yên, tỉnh Thái Nguyên, Việt Nam. Mã số thuế 4601572753 Lĩnh vực hoạt động chính là sản xuất vàbán buôn thức ăn và nguyên liệu làm thức gia súc, gia cầm.",
+    "4": "Công ty cổ phần thương mại LOGISTICS Nam Việt có địa chỉ tại Tổ 9, phường Hoàng Văn Thụ, Thành phốThái Nguyên, Tỉnh Thái Nguyên, Việt Nam. Mã số thuế 4601599762 lĩnh vực hoạt động chính là tư vấn dịchvụ đầu tư FDI vào Việt Nam. Dịch vụ kho bãi, nhà xưởng cho các nhà đầu tư FDI và nhà đầu tư trongnước, dịch vụ vận chuyển hàng hóa quốc tế.",
+    "5": "Cửa hàng xăng dầu số 1 Công ty cổ phần Nam Việt, có địa chỉ tại tổ 1, phường Đồng Bẩm, thành phố Thái Nguyên, tỉnh Thái Nguyên, Việt Nam. Mã số thuế 4600305924-001 lĩnh vực hoạt động chính là bán lẻ xăng,dầu.",
+    "6": "Công ty TNHH Feed Trading Việt Nam, có địa chỉ tại Biệt thự số 15 - BT1 Khu đô thị mới Cổ Nhuế - XuânĐỉnh, Phường Cổ Nhuế 2, Quận Bắc Từ Liêm, Thành phố Hà Nội, Việt Nam. Mã số thuế 0106173059, lĩnh hoạthoạt động chính là nhập khẩu nguyên vật liệu và dịch vụ vận tải.</p>",
+    "7": "Công ty cổ phần xây dựng nông nghiệp và phát triển nông thôn Thái Nguyên, có địa chỉ tại tổ 15, phườngQuang Trung, thành phố Thái Nguyên, tỉnh Thái Nguyên, Việt Nam. Mã số thuế 4600105971, lĩnh vực hoạtđộng chính là xây dựng cơ sở hạ tầng phát triển nông nghiệp, nông thôn, xây dựng các mô hình trangtrại sạch, hạ tầng khu đô thị, nhà ở, thương mại và nhà ở cho thuê.",
+    "8": "Công ty cổ phần phát triển thương mại du lịch Nam Việt có địa chỉ tại tổ 11, phường Hoàng Văn Thụ,thành phố Thái Nguyên, tỉnh Thái Nguyên, Việt Nam. Mã số thuế 4601588418, lĩnh vực hoạt động chính làdịch vụ lưu trú ngắn ngày, ăn uống, tổ chức sự kiện, hội nghị, spa, chăm sóc sức khỏe…",
+    "9": "Chi nhánh kho cảng Công ty cổ phần Nam Việt tại Quảng Ninh, có địa chỉ tại khu công nghiệp Cái Lân,phường Bãi Cháy, thành phố Hạ Long, tỉnh Quảng Ninh, Việt Nam. Mã số thuế 4600305924-002, lĩnh vựchoạt động chính là lĩnh vực kho bãi và dịch vụ lưu giữ hàng hóa, bốc xếp, Container, bảo hiểm hàng hóaquốc tế.",
+    "10": "Công ty TNHH sản xuất và thương mại Quốc tế Vapco, có địa chỉ tại Lô CN 9 Khu Công Nghiệp Điềm Thụy,Xã Điềm Thụy, Huyện Phú Bình, Tỉnh Thái Nguyên. Lĩnh vực hoạt động chính là giải pháp quản lý hànghóa, kho bãi trong hệ thống đám mây và tư vấn dịch vụ cho các công ty FDI, nhà xưởng và dịch vụ."
+  },
+  "projects": {
+    "1": "Trang chu",
+    "2": "Tin Tuc",
+    "3": "Tin Chuyen Nganh",
+    "4": "Xem tat ca",
+    "5": "Tin Noi Bo",
+    "6": "Tin Moi Nhat",
+    "7": "CTCP xây dựng nông nghiệp và phát triển nông thôn Thái Nguyên",
+    "8": "CTCP phát triển thương mại du lịch Nam Việt",
+    "9": "Kho cảng CTCP Nam Việt Quảng Ninh",
+    "10": "Công ty TNHH sản xuất và thương mại Quốc tế Vapco"
+  },
+  "contacts": {
+    "1": "Trang chủ",
+    "2": "Liên hệ",
+    "3": "Kết nối với Nam Viet",
+    "4": "Gửi tin nhắn cho chúng tôi để được giải đáp mọi thắc mắc về sản phẩm và dịch vụ của Nam Viet"
   }
 }
