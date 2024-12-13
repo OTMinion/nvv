@@ -11,9 +11,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Nam Viet JSC - Nhà sản xuất thức ăn chăn nuôi chất lượng cao | Premium Animal Feed Manufacturing",
+    "CTCP Nam Viet - Nhà sản xuất thức ăn chăn nuôi chất lượng cao | Premium Animal Feed Manufacturing",
   description:
-    "Nam Viet JSC - 20 năm kinh nghiệm sản xuất thức ăn chăn nuôi chất lượng cao cho gia súc, gia cầm. 20 years of experience in premium animal feed manufacturing.",
+    "CTCP Nam Viet - 20 năm kinh nghiệm sản xuất thức ăn chăn nuôi chất lượng cao cho gia súc, gia cầm. 20 years of experience in premium animal feed manufacturing.",
 };
 
 export const revalidate = 60;
