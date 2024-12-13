@@ -121,7 +121,9 @@ const Page = () => {
                     {event.year}
                   </span>
                   <FaCircle
-                    className={`-mt-2 ${selectedYear === event.year ? "text-customYellow" : "text-black"}`}
+                    className={`-mt-2 ${
+                      selectedYear === event.year ? "text-customYellow" : "text-black"
+                    }`}
                   />
                 </div>
               ))}
@@ -130,7 +132,13 @@ const Page = () => {
 
           {/* Image below the timeline */}
           <div className="flex flex-col md:flex-row mb-32 md:mt-10 md:gap-20 mx-5">
-            <Image src={imageSrc} width={600} height={500} alt="Selected Time Event" className="rounded-lg" />
+            <Image
+              src={imageSrc}
+              width={600}
+              height={500}
+              alt="Selected Time Event"
+              className="rounded-lg"
+            />
             <div className="flex flex-col space-y-6 pt-10">
               <h1 className="text-4xl font-bold text-customYellow">
                 {timelineEvents.find((event) => event.year === selectedYear)?.title}
@@ -168,34 +176,70 @@ const Page = () => {
           <div className="h-px bg-gray-300" />
 
           <div className="flex flex-col items-center my-5">
-            <Image src="/images/team/5.jpg" alt="team" width={1920} height={1080} className="h-72 w-56" />
+            <Image
+              src="/images/team/5.jpg"
+              alt="team"
+              width={1920}
+              height={1080}
+              className="h-72 w-56"
+            />
             <p className="font-bold text-lg mt-2"> {t("20")}</p>
             <p>{t("21")}</p>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 lg:mx-16">
             <div className="flex flex-col items-center">
-              <Image src="/images/team/1.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
+              <Image
+                src="/images/team/1.jpg"
+                alt="team"
+                width={1920}
+                height={1080}
+                className="h-72 w-60"
+              />
               <p className="font-bold text-lg mt-2">NGUYỄN THỊ NỤ</p>
               <p>{t("22")}</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src="/images/team/2.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
+              <Image
+                src="/images/team/2.jpg"
+                alt="team"
+                width={1920}
+                height={1080}
+                className="h-72 w-60"
+              />
               <p className="font-bold text-lg mt-2"> HOÀNG THANH PHONG</p>
               <p>{t("23")}</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src="/images/team/3.jpg" alt="team" width={1920} height={1080} className="h-72 w-56" />
+              <Image
+                src="/images/team/3.jpg"
+                alt="team"
+                width={1920}
+                height={1080}
+                className="h-72 w-56"
+              />
               <p className="font-bold text-lg mt-2"> NGUYỄN ĐỨC HÙNG</p>
               <p className="text-center">{t("24")}</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src="/images/team/4.jpg" alt="team" width={1920} height={1080} className="h-72 w-48" />
+              <Image
+                src="/images/team/4.jpg"
+                alt="team"
+                width={1920}
+                height={1080}
+                className="h-72 w-48"
+              />
               <p className="font-bold text-lg mt-2"> NGUYỄN VĂN HÙNG</p>
               <p>{t("25")}</p>
             </div>
             <div className="flex flex-col items-center text-center">
-              <Image src="/images/team/6.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
+              <Image
+                src="/images/team/6.jpg"
+                alt="team"
+                width={1920}
+                height={1080}
+                className="h-72 w-60"
+              />
               <p className="font-bold text-lg mt-2">Lorem, ipsum dolor.</p>
               <p>{t("26")}</p>
             </div>
@@ -203,32 +247,68 @@ const Page = () => {
 
           <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 my-5 space-x-4">
             <div className="flex flex-col items-center">
-              <Image src="/images/team/7.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
+              <Image
+                src="/images/team/7.jpg"
+                alt="team"
+                width={1920}
+                height={1080}
+                className="h-72 w-60"
+              />
               <p className="font-bold text-lg mt-2"> NGUYỄN VĂN ĐÍCH</p>
               <p className="text-center">{t("27")}</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src="/images/team/8.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
+              <Image
+                src="/images/team/8.jpg"
+                alt="team"
+                width={1920}
+                height={1080}
+                className="h-72 w-60"
+              />
               <p className="font-bold text-lg mt-2"> HÀ VĂN HƯỞNG</p>
               <p className="text-center">{t("28")}</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src="/images/team/9.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
+              <Image
+                src="/images/team/9.jpg"
+                alt="team"
+                width={1920}
+                height={1080}
+                className="h-72 w-60"
+              />
               <p className="font-bold text-lg mt-2"> NGUYỄN MẠNH HÀ</p>
               <p className="text-center">{t("29")}</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src="/images/team/10.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
+              <Image
+                src="/images/team/10.jpg"
+                alt="team"
+                width={1920}
+                height={1080}
+                className="h-72 w-60"
+              />
               <p className="font-bold text-lg mt-2"> LÊ VĂN MIÊN</p>
               <p className="text-center">{t("30")}</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src="/images/team/11.jpg" alt="team" width={1920} height={1080} className="h-72 w-60" />
+              <Image
+                src="/images/team/11.jpg"
+                alt="team"
+                width={1920}
+                height={1080}
+                className="h-72 w-60"
+              />
               <p className="font-bold text-lg mt-2"> PHẠM VĂN DŨNG</p>
               <p className="text-center">{t("31")}</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src="/images/team/12.jpg" alt="team" width={1920} height={1080} className="h-72 w-48" />
+              <Image
+                src="/images/team/12.jpg"
+                alt="team"
+                width={1920}
+                height={1080}
+                className="h-72 w-48"
+              />
               <p className="font-bold text-lg mt-2">Nguyễn Mạnh Hải</p>
               <p className="text-center">{t("32")}</p>
             </div>

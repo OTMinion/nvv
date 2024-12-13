@@ -1,76 +1,111 @@
+"use client";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import { FaFacebook, FaYoutube, FaLinkedin } from "react-icons/fa";
+
 const Footer = () => {
   const t = useTranslations("footer");
   const p = useTranslations("nav");
+
+  const socialLinks = [
+    { name: "Facebook", icon: FaFacebook, href: "#", color: "hover:text-[#1877F2]" },
+    { name: "Youtube", icon: FaYoutube, href: "#", color: "hover:text-[#FF0000]" },
+    { name: "LinkedIn", icon: FaLinkedin, href: "#", color: "hover:text-[#0A66C2]" },
+  ];
+
+  const navLinks = [
+    { name: p("home"), href: "/" },
+    { name: p("about"), href: "/about" },
+    { name: p("industries"), href: "/industries" },
+    { name: p("career"), href: "/careers" },
+    { name: p("news"), href: "/projects" },
+    { name: p("contact"), href: "/contact" },
+  ];
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 },
+  };
+
   return (
-    <footer className="bg-customBlue text-gray-300 pt-12">
-      <div className="container lg:mx-28 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Column 1 */}
-          <div>
-            <h3 className="text-xl font-semibold mb-4">{t("1")}</h3>
-            <p className="text-sm">{t("2")}</p>
-          </div>
+    <footer className="bg-customBlue text-gray-300 pt-12" role="contentinfo">
+      <div className="container mx-auto max-w-7xl px-4 lg:px-28">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, staggerChildren: 0.2 }}
+        >
+          {/* Company Info */}
+          <motion.div className="space-y-4" {...fadeInUp}>
+            <h2 className="text-2xl font-bold text-white mb-6">{t("1")}</h2>
+            <p className="text-base leading-relaxed opacity-90">{t("2")}</p>
+          </motion.div>
 
-          {/* Column 2 */}
-          <div>
-            <h3 className="text-xl font-semibold mb-4">{t("3")}</h3>
-            <address className="text-sm ">
-              <div>{t("4")}</div>
-              <br />
-              <div>{t("5")}</div>
-              <br />
-              <div>{t("6")}</div>
+          {/* Contact Info */}
+          <motion.div className="space-y-4" {...fadeInUp}>
+            <h2 className="text-2xl font-bold text-white mb-6">{t("3")}</h2>
+            <address className="text-base not-italic space-y-4">
+              <p className="flex items-start">{t("4")}</p>
+              <p className="flex items-start">{t("5")}</p>
+              <p className="flex items-start">{t("6")}</p>
             </address>
-          </div>
+          </motion.div>
 
-          {/* Column 3 */}
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
-              <Link href="#" className="text-blue-500 hover:underline">
-                Facebook
-              </Link>
-              <Link href="#" className="text-blue-500 hover:underline">
-                Youtube
-              </Link>
-              <Link href="#" className="text-blue-500 hover:underline">
-                LinkedIn
-              </Link>
+          {/* Social Links */}
+          <motion.div className="space-y-6" {...fadeInUp}>
+            <h2 className="text-2xl font-bold text-white mb-6">Follow Us</h2>
+            <div className="flex space-x-6">
+              {socialLinks.map((social) => (
+                <motion.a
+                  key={social.name}
+                  href={social.href}
+                  className={`text-2xl ${social.color} transition-colors duration-300`}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label={`Follow us on ${social.name}`}
+                >
+                  <social.icon />
+                </motion.a>
+              ))}
             </div>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Bottom Bar */}
+      <motion.div
+        className="bg-customRed mt-12 py-6 px-4 lg:px-28"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 }}
+      >
+        <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+          {/* Copyright */}
+          <div className="text-center lg:text-left">
+            <p className="text-sm opacity-90">{t("7")}</p>
+            <p className="text-sm opacity-90 mt-2">All Rights Reserved</p>
           </div>
-        </div>
-      </div>
 
-      <div className="bg-customRed flex flex-col-reverse lg:flex-row justify-between mt-12 px-4 lg:px-28 py-4">
-        <div className=" lg:mt-0">
-          <p>{t("7")}</p>
-          <br />
-          <p className="-mt-5">All Rights Reserved</p>
+          {/* Navigation */}
+          <nav className="grid grid-cols-2 md:grid-cols-3 lg:flex gap-6 lg:gap-10">
+            {navLinks.map((link) => (
+              <motion.div key={link.href} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href={link.href}
+                  className="text-base hover:text-white transition-colors duration-300"
+                >
+                  {link.name}
+                </Link>
+              </motion.div>
+            ))}
+          </nav>
         </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:flex-row gap-10 text-xl justify-center items-center ">
-          <Link href="/" className="hover:text-customBlue transition duration-300">
-            {p("home")}
-          </Link>
-          <Link href="/about" className="hover:text-customBlue transition duration-300">
-            {p("about")}
-          </Link>
-          <Link href="/industries" className="hover:text-customBlue transition duration-300">
-            {p("industries")}
-          </Link>
-          <Link href="/careers" className="hover:text-customBlue transition duration-300">
-            {p("career")}
-          </Link>
-          <Link href="/projects" className="hover:text-customBlue transition duration-300">
-            {p("news")}
-          </Link>
-          <Link href="/contact" className="hover:text-customBlue transition duration-300">
-            {p("contact")}
-          </Link>
-        </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };
