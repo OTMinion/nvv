@@ -8,6 +8,7 @@ import Career from "@/components/home/career";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
@@ -45,9 +46,11 @@ export default function IndexPage({ params: { locale } }: Props) {
             <br />
             <span>{t("10")}</span>
           </h1>
-          <Button variant="outline" aria-label="Tìm hiểu thêm về Nam Viet JSC">
-            {t("11")}
-          </Button>
+          <Link href={`/${locale}/about`}>
+            <Button variant="outline" aria-label="Tìm hiểu thêm về Nam Viet JSC">
+              {t("11")}
+            </Button>
+          </Link>
         </div>
       </section>
 

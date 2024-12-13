@@ -35,10 +35,10 @@ interface VideoBlock {
 interface TextSpan {
   _type: "span";
   text: string;
-  marks?: string[]; // An array of mark identifiers like 'strong', 'em', etc.
+  marks?: string[];
 }
 
-type TextChildren = TextSpan[]; // Array of TextSpan
+type TextChildren = TextSpan[];
 
 function isImageBlock(block: PortableTextBlock): block is ImageBlock {
   return block._type === "image" && block.asset !== undefined;
@@ -63,7 +63,6 @@ function renderRichText(blocks: TextChildren) {
         </span>
       );
     }
-
     return null;
   });
 }
@@ -80,49 +79,65 @@ export default async function Project({ params }: Props) {
         <div className="lg:w-2/3 pr-8">
           <div className="mx-6 lg:ml-28 lg:mr-16">
             <header className="flex flex-col">
-              <div className="flex space-x-4 text-xl mt-10 mb-5">
-                <p>Trang chu </p>
+              <nav className="flex space-x-4 text-xl mt-10 mb-5" aria-label="Breadcrumb">
+                <p>Trang chủ</p>
                 <span>|</span>
-                <p>News </p>
+                <p>News</p>
                 <span>|</span>
                 <p>{project.category}</p>
-              </div>
+              </nav>
 
               <h1 className="text-3xl font-extrabold">{project.name}</h1>
             </header>
 
-            <div className="text-lg text-gray-700 mt-5">
+            <article className="text-lg text-gray-700 mt-5">
               {project.content.map((block) => {
                 if (isImageBlock(block)) {
                   return (
-                    <div className="flex justify-center" key={block._key}>
+                    <div className="flex flex-col items-center mb-8" key={block._key}>
                       <Image
                         src={block.asset.url}
-                        alt={block.alt || " "}
+                        alt={block.alt || `${project.name} - Nam Viet JSC`}
                         width={700}
                         height={600}
                         className="w-[50rem] h-[30rem] object-cover"
                       />
+                      {block.alt && (
+                        <div className="w-full text-center mt-2">
+                          <p className="text-gray-600 text-sm italic">{block.alt}</p>
+                        </div>
+                      )}
                     </div>
                   );
                 } else if (isVideoBlock(block)) {
                   return (
-                    <div className="flex justify-center" key={block._key}>
-                      <video src={block.asset.url} controls className="w-[50rem] h-[30rem] object-cover" />
-                    </div>
+                    <figure className="flex flex-col items-center my-8" key={block._key}>
+                      <div className="relative overflow-hidden rounded-lg shadow-md">
+                        <video
+                          src={block.asset.url}
+                          controls
+                          className="w-[50rem] h-[30rem] object-cover"
+                          title={`${project.name} video - Nam Viet JSC`}
+                        />
+                      </div>
+                    </figure>
                   );
                 } else if (block._type === "block" && Array.isArray(block.children)) {
-                  return <p key={block._key}>{block.children ? renderRichText(block.children) : ""}</p>;
+                  return (
+                    <p className="mb-4 leading-relaxed" key={block._key}>
+                      {block.children ? renderRichText(block.children) : ""}
+                    </p>
+                  );
                 }
                 return null;
               })}
-            </div>
+            </article>
           </div>
         </div>
 
-        <div className="lg:w-1/3">
+        <aside className="lg:w-1/3">
           <RightBlog />
-        </div>
+        </aside>
       </div>
     </div>
   );

@@ -1,11 +1,16 @@
 import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const revalidate = 60;
 
 interface RightBlogProps {
   width?: string;
+  params?: {
+    locale: string;
+  };
+  locale?: string;
 }
 
 function formatDate(dateString: Date) {
@@ -17,7 +22,11 @@ function formatDate(dateString: Date) {
   }).format(date);
 }
 
-export default async function RightBlog({ width }: RightBlogProps) {
+export default async function RightBlog({ width, params, locale: propLocale }: RightBlogProps) {
+  // Get locale from either params or propLocale, fallback to "vn"
+  const locale = params?.locale || propLocale || "vn";
+  unstable_setRequestLocale(locale);
+
   const projects = await getProjects();
   const componentWidth = width;
 
@@ -46,12 +55,14 @@ export default async function RightBlog({ width }: RightBlogProps) {
           <div key={project._id}>
             <div className="flex justify-between">
               <div className="flex flex-col w-[59%]">
-                <Link href={`/projects/${project.slug}`}>
-                  <p className="text-md font-bold">{project.name}</p>
+                <Link href={`/${locale}/projects/${project.slug}`}>
+                  <p className="text-md font-bold hover:text-customRed transition duration-300">
+                    {project.name}
+                  </p>
                 </Link>
                 <p className="text-sm text-gray-500 mt-4">
                   <Link
-                    href={`/projects/${getCategorySlug(project.category)}`}
+                    href={`/${locale}/projects/${getCategorySlug(project.category)}`}
                     className="hover:text-customRed transition duration-300 pr-1"
                   >
                     {project.category}
@@ -59,11 +70,11 @@ export default async function RightBlog({ width }: RightBlogProps) {
                   | {formatDate(project.createdAt)}
                 </p>
               </div>
-              <Link href={`/projects/${project.slug}`}>
+              <Link href={`/${locale}/projects/${project.slug}`}>
                 <Image
                   src={project.image}
                   alt={project.name}
-                  className="object-cover rounded-sm h-28 w-36"
+                  className="object-cover rounded-sm h-28 w-36 hover:opacity-90 transition-opacity"
                   width={144}
                   height={112}
                 />
