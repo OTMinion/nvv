@@ -8,7 +8,6 @@
     "contact": "Contact",
     "news": "News",
     "industries": "Industries",
-    "career": "Career",
     "1": "Nam Viet Corporation",
     "2": "Pilmico Group Corporation",
     "3": "Veronesi Group Corporation",
@@ -23,7 +22,7 @@
   "hero": {
     "1": "We are the leader in",
     "2": "industrial services",
-    "3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni exercitationem nam quibusdam maioresiste molestiae qui repellat magnam excepturi eius?",
+    "3": "We provide high-quality industrial services, meeting diverse customer needs with professionalism and efficiency.",
     "4": "About Us",
     "5": "projects",
     "6": "years",
@@ -39,14 +38,10 @@
   },
   "partner": {
     "1": "Our partners are spread around the world",
-    "2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus praesentium molestiae,dolor blanditiis veniam a placeat mollitia quidem dolores?",
+    "2": "We collaborate with many international partners to bring the best agricultural solutions to our customers.",
     "3": "Contact Us"
   },
-  "career": {
-    "1": "Get started a career in Industrial company",
-    "2": "We are constantly developing our plants and looking for new experienced people to work in ourfactories. The list of current offers is available below.",
-    "3": "View All"
-  },
+
   "news": {
     "1": "News",
     "2": "View All"
@@ -62,19 +57,19 @@
   },
 
   "about": {
-    "1": "Start",
-    "2": "Signing contract with major investor",
-    "3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
-    "4": "Recognition in the market",
-    "5": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
-    "6": "Increasing our team",
-    "7": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
-    "8": "Opening of a new office",
-    "9": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
-    "10": "Opening of new capacities",
-    "11": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
-    "12": "The best in the industry market",
-    "13": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit",
+    "1": "Begin",
+    "2": "Sign contract with major investor",
+    "3": "We have signed a contract with a major investor, opening new development opportunities for the company.",
+    "4": "Market recognition",
+    "5": "Our company has achieved market recognition thanks to our product and service quality.",
+    "6": "Team expansion",
+    "7": "We have expanded our staff to meet the company's development needs.",
+    "8": "New office opening",
+    "9": "We have opened a new office to better serve our customers.",
+    "10": "Expand production capacity",
+    "11": "We have invested in expanding production capacity to meet growing demands.",
+    "12": "Industry market leader",
+    "13": "We are proud to be a leading company in our industrial market.",
     "14": "Home",
     "15": "About Nam Viet",
     "16": "About Nam Viet",

@@ -4,7 +4,6 @@ import About from "@/components/home/about";
 import Industries from "@/components/home/industries";
 import Partner from "@/components/home/partner";
 import Blog from "@/components/home/blog";
-import Career from "@/components/home/career";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
@@ -57,7 +56,7 @@ export default function IndexPage({ params: { locale } }: Props) {
       <About />
       <Industries />
       <Partner />
-      <Career />
+
       <Blog />
     </div>
   );

@@ -94,7 +94,10 @@ export default function About() {
         <Image
           src="/images/warehouse.jpg"
           alt="Nhà máy sản xuất thức ăn chăn nuôi Nam Viet | Nam Viet Feed Manufacturing Plant"
-          layout="fill"
+          width={500}
+          height={400}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j..." // Add a base64 blur image
           objectFit="cover"
         />
         <motion.div

@@ -8,7 +8,6 @@
     "contact": "Liên hệ",
     "news": "Tin tức",
     "industries": "Lĩnh vực",
-    "career": "Nghề nghiệp",
     "1": "CTCP Nam Viet",
     "2": "CTCP Pilmico Group",
     "3": "CTCP Veronesi Group",
@@ -42,11 +41,7 @@
     "2": "Chúng tôi hợp tác với nhiều đối tác quốc tế để mang đến những giải pháp nông nghiệp tốt nhất cho khách hàng.",
     "3": "Liên hệ với chúng tôi"
   },
-  "career": {
-    "1": "Bắt đầu sự nghiệp tại công ty sản xuất hàng đầu Thái Nguyên",
-    "2": "Chúng tôi liên tục phát triển các nhà máy và tìm kiếm những người có kinh nghiệm mới để làm việc tại các nhà máy của chúng tôi. Danh sách các vị trí hiện tại có sẵn bên dưới.",
-    "3": "Xem tất cả"
-  },
+
   "news": {
     "1": "Tin tức",
     "2": "Xem tất cả"

@@ -2,57 +2,59 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
+import { useLocale } from "next-intl";
 
 const Industries = () => {
+  const locale = useLocale();
+
   const industries = [
     {
-      href: "/industries/cang_quang_ninh",
+      href: `/${locale}/industries/cang_quang_ninh`,
       imgSrc: "/images/companies/29.jpg",
       title: "Kho cảng CTCP Nam Việt Quảng Ninh",
     },
     {
-      href: "/industries/feed_trading",
+      href: `/${locale}/industries/feed_trading`,
       imgSrc: "/images/companies/31.jpeg",
       title: "Công ty TNHH Feed Trading",
     },
     {
-      href: "/industries/gas",
+      href: `/${locale}/industries/gas`,
       imgSrc: "/images/companies/15.jpeg",
       title: "Cửa hàng xăng dầu số 1",
     },
     {
-      href: "/industries/logistics",
+      href: `/${locale}/industries/logistics`,
       imgSrc: "/images/companies/13.jpeg",
       title: "Logistics",
     },
     {
-      href: "/industries/nam_viet",
+      href: `/${locale}/industries/nam_viet`,
       imgSrc: "/images/companies/1.jpeg",
       title: "Nam Viet Jsc",
     },
     {
-      href: "/industries/nong_nghiep_nong_thon",
+      href: `/${locale}/industries/nong_nghiep_nong_thon`,
       imgSrc: "/images/companies/18.jpg",
       title: "CTCP xây dựng nông nghiệp và phát triển nông thôn Thái Nguyên",
     },
     {
-      href: "/industries/pilmico",
+      href: `/${locale}/industries/pilmico`,
       imgSrc: "/images/companies/4.jpg",
       title: "Pilmico Group",
     },
     {
-      href: "/industries/thuong_mai_du_lich",
+      href: `/${locale}/industries/thuong_mai_du_lich`,
       imgSrc: "/images/companies/23.jpeg",
       title: "CTCP phát triển thương mại du lịch Nam Việt",
     },
-
     {
-      href: "/industries/vapco",
+      href: `/${locale}/industries/vapco`,
       imgSrc: "/images/companies/33.jpeg",
       title: "Công ty TNHH sản xuất và thương mại Quốc tế Vapco",
     },
     {
-      href: "/industries/veronesi",
+      href: `/${locale}/industries/veronesi`,
       imgSrc: "/images/companies/7.jpeg",
       title: "CTCP Veronesi Group",
     },
@@ -71,25 +73,27 @@ const Industries = () => {
         />
         <div className="absolute ml-10 bottom-0 mb-20 flex flex-col text-white">
           <div className="flex text-lg">
-            <Link href="/">Trang chủ</Link>
+            <Link href={`/${locale}`}>Trang chủ</Link>
             <div className="mx-2 mb-4"> | </div>
             <p>Industries</p>
           </div>
-
           <h1 className="text-6xl font-bold">Industries</h1>
         </div>
       </div>
-
       {/* Contact form */}
       <div className="flex flex-col mt-16 mb-10 xl:mx-28">
         <h1 className="text-5xl font-bold pb-10">What we do for you</h1>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-300 ">
           {industries.map((industry, index) => (
             <Link href={industry.href} key={index} className="group cursor-pointer">
               <div className="w-full h-72  overflow-hidden bg-industryGray">
                 <div className="w-full h-72 group-hover:h-60 transform transition-all duration-150 group-hover:scale-110">
-                  <Image src={industry.imgSrc} alt={industry.title} layout="fill" objectFit="cover" />
+                  <Image
+                    src={industry.imgSrc}
+                    alt={industry.title}
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
               </div>
               <div className="flex flex-col justify-between bg-industryGray pl-4 pb-4 h-52 group-hover:h-64 group-hover:-mt-12 transition-all duration-300">

@@ -18,7 +18,7 @@ const Industries = () => {
       image: "/images/companies/1.jpeg",
       title: "Nam Viet Jsc",
       description:
-        "Nhà sản xuất thức ăn chăn nuôi hàng đầu Việt Nam | Leading animal feed manufacturer in Vietnam",
+        "Nhà sản xuất thức ăn chăn nuôi hàng đầu Việt Nam | Leading animal feed manufacturer",
     },
     {
       href: `/${locale}/industries/pilmico`,
@@ -35,13 +35,12 @@ const Industries = () => {
   ];
 
   return (
-    <section className="bg-customGray mt-10" aria-label="Lĩnh vực kinh doanh | Business Areas">
+    <section className="bg-customGray mt-10">
       <motion.h1
         className="text-5xl font-bold py-16 pl-4 md:pl-32"
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
       >
         {t("1")}
       </motion.h1>
@@ -53,86 +52,56 @@ const Industries = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            transition={{ delay: index * 0.1 }}
           >
             <Link
               href={business.href}
               className="relative md:w-[18rem] h-32 md:h-96 overflow-hidden group cursor-pointer block"
-              title={business.description}
             >
-              <div className="relative w-full h-full overflow-hidden rounded-lg shadow-lg">
-                <motion.div
-                  className="absolute w-full h-full transform transition-transform duration-500 group-hover:scale-110"
-                  whileHover={{ scale: 1.1 }}
-                >
+              <div className="relative w-full h-full overflow-hidden">
+                <div className="absolute w-full h-full transform transition-transform duration-500 group-hover:scale-110">
                   <Image
                     src={business.image}
                     alt={business.description}
                     layout="fill"
                     objectFit="cover"
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
                   />
-                </motion.div>
-                <div className="absolute w-full h-full bg-gradient-to-b from-transparent to-black opacity-60"></div>
+                </div>
+                <div className="absolute w-full h-full bg-black opacity-10"></div>
               </div>
 
-              <motion.div
-                className="absolute bottom-0 w-full h-[3%] bg-customRed"
-                whileHover={{ height: "100%", opacity: 0.1 }}
-                transition={{ duration: 0.3 }}
-              />
+              <div className="absolute bottom-0 w-full h-[3%] bg-customRed group-hover:bg-transparent transition duration-500"></div>
 
-              <motion.div
-                className="absolute top-0 left-0 w-full h-full flex justify-between items-end pb-10 pl-10"
-                whileHover={{ y: -5 }}
-              >
-                <span className="text-white text-2xl font-bold drop-shadow-lg">
-                  {business.title}
-                </span>
-                <FiArrowDownRight className="text-white mr-5 text-3xl transform group-hover:rotate-[-45deg] transition-transform duration-300" />
-              </motion.div>
+              <div className="absolute top-0 left-0 w-full h-full flex justify-between items-end pb-10 pl-10">
+                <span className="text-white text-2xl font-bold">{business.title}</span>
+                <FiArrowDownRight className="text-white mr-5 text-3xl arrow-icon" />
+              </div>
             </Link>
           </motion.div>
         ))}
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <Link
-            href={`/${locale}/industries`}
-            className="text-center block md:hidden hover:text-customRed transition-colors duration-300"
-          >
-            {t("2")}
-          </Link>
+        {/* Mobile link */}
+        <Link href={`/${locale}/industries`} className="text-center md:hidden">
+          {t("2")}
+        </Link>
 
-          <Link
-            href={`/${locale}/industries`}
-            className="relative w-[10rem] h-32 md:h-96 overflow-hidden cursor-pointer hidden sm:block"
-            title="Xem tất cả lĩnh vực | View all industries"
-          >
-            <motion.div
-              className="absolute w-full h-full flex items-center justify-center"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="relative bg-white rounded-full w-40 h-40 flex items-center justify-center group shadow-lg">
-                <motion.div
-                  className="flex items-center"
-                  whileHover={{ x: 40 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <FiArrowDownRight className="text-black text-5xl -rotate-45" size={60} />
-                  <span className="absolute right-full text-black text-xl opacity-0 group-hover:opacity-100 transform translate-x-full transition-all duration-300 whitespace-nowrap">
-                    {t("2")}
-                  </span>
-                </motion.div>
-              </div>
-            </motion.div>
-          </Link>
-        </motion.div>
+        {/* Desktop animated link - keeping original effect */}
+        <Link
+          href={`/${locale}/industries`}
+          className="relative w-[10rem] h-32 md:h-96 overflow-hidden cursor-pointer hidden sm:block"
+        >
+          <div className="absolute w-full h-full flex items-center justify-center">
+            <div className="relative bg-white rounded-full w-40 h-40 flex items-center justify-center group">
+              <FiArrowDownRight
+                className="text-black text-5xl -rotate-45 transition-all duration-500 group-hover:translate-x-40"
+                size={60}
+              />
+              <span className="absolute right-full text-black text-xl opacity-0 group-hover:translate-x-[150%] group-hover:opacity-100 transition-all duration-500 whitespace-nowrap">
+                {t("2")}
+              </span>
+            </div>
+          </div>
+        </Link>
       </div>
     </section>
   );

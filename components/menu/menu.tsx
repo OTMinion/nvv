@@ -32,7 +32,10 @@ const Menu = () => {
 
       <div className="group inline-block relative z-10 ">
         <div className="flex">
-          <Link href={`/${locale}/industries`} className="p-4 group relative cursor-pointer  text-xl">
+          <Link
+            href={`/${locale}/industries`}
+            className="p-4 group relative cursor-pointer  text-xl"
+          >
             {t("industries")}
             <span
               className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[110%] 
@@ -43,22 +46,37 @@ const Menu = () => {
         </div>
         <div className="absolute hidden group-hover:block  w-[55rem] left-1/2 transform -translate-x-[38%]">
           <div className="grid lg:grid-cols-3 py-2 px-3 rounded bg-white shadow z-20">
-            <Link href={`/${locale}/industries/nam_viet`} className="block py-4 px-2 hover:bg-gray-200">
+            <Link
+              href={`/${locale}/industries/nam_viet`}
+              className="block py-4 px-2 hover:bg-gray-200"
+            >
               {t("1")}
             </Link>
-            <Link href={`/${locale}/industries/pilmico`} className="block py-4 px-2 hover:bg-gray-200">
+            <Link
+              href={`/${locale}/industries/pilmico`}
+              className="block py-4 px-2 hover:bg-gray-200"
+            >
               {t("2")}
             </Link>
-            <Link href={`/${locale}/industries/veronesi`} className="block py-4 px-2 hover:bg-gray-200">
+            <Link
+              href={`/${locale}/industries/veronesi`}
+              className="block py-4 px-2 hover:bg-gray-200"
+            >
               {t("3")}
             </Link>
-            <Link href={`/${locale}/industries/logistics`} className="block py-4 px-2 hover:bg-gray-200">
+            <Link
+              href={`/${locale}/industries/logistics`}
+              className="block py-4 px-2 hover:bg-gray-200"
+            >
               {t("4")}
             </Link>
             <Link href={`/${locale}/industries/gas`} className="block py-4 px-2 hover:bg-gray-200">
               {t("5")}
             </Link>
-            <Link href={`/${locale}/industries/feed_trading`} className="block py-4 px-2 hover:bg-gray-200">
+            <Link
+              href={`/${locale}/industries/feed_trading`}
+              className="block py-4 px-2 hover:bg-gray-200"
+            >
               {t("6")}
             </Link>
             <Link
@@ -79,16 +97,14 @@ const Menu = () => {
             >
               {t("9")}
             </Link>
-            <Link href={`/${locale}/industries/vapco`} className="block py-4 px-2 hover:bg-gray-200">
+            <Link
+              href={`/${locale}/industries/vapco`}
+              className="block py-4 px-2 hover:bg-gray-200"
+            >
               {t("10")}
             </Link>
           </div>
         </div>
-      </div>
-
-      <div className="p-4 group relative cursor-pointer text-xl">
-        <Link href={`/${locale}/career`}>{t("career")}</Link>
-        <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[80%] transition-transform"></span>
       </div>
 
       <div className="p-4 group relative cursor-pointer text-xl">

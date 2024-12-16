@@ -54,7 +54,9 @@ const Dropdown = () => {
       </button>
 
       {/* Overlay */}
-      {isOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-40 " onClick={closeSidebar}></div>}
+      {isOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-40 " onClick={closeSidebar}></div>
+      )}
 
       <div
         className={`fixed inset-y-0 left-0 w-3/4 max-w-sm bg-white shadow-lg transform ${
@@ -110,13 +112,7 @@ const Dropdown = () => {
                 ))}
               </div>
             </div>
-            <Link
-              href={`/${locale}/career`}
-              onClick={closeSidebar}
-              className="block py-2 text-customBlue text-lg hover:text-opacity-70 transition-colors"
-            >
-              {t("career")}
-            </Link>
+
             <Link
               href={`/${locale}/projects`}
               onClick={closeSidebar}

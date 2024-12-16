@@ -7,9 +7,12 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { useLocale } from "next-intl";
 
 const Partner = () => {
   const t = useTranslations("partner");
+  const locale = useLocale();
 
   const settings = {
     dots: true,
@@ -72,7 +75,11 @@ const Partner = () => {
           <h2 className="text-4xl font-bold">{t("1")}</h2>
           <p className="text-gray-600 leading-relaxed">{t("2")}</p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button className="w-fit shadow-md hover:shadow-lg transition-shadow">{t("3")}</Button>
+            <Link href={`/${locale}/about`}>
+              <Button className="w-fit shadow-md hover:shadow-lg transition-shadow">
+                {t("3")}
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
 
