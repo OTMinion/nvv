@@ -1,11 +1,15 @@
+import { unstable_setRequestLocale } from "next-intl/server";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-import { useLocale } from "next-intl";
 
-const Industries = () => {
-  const locale = useLocale();
+type Props = {
+  params: { locale: string };
+};
+
+const Industries = async ({ params: { locale } }: Props) => {
+  unstable_setRequestLocale(locale);
 
   const industries = [
     {
