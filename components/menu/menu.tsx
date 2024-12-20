@@ -15,7 +15,7 @@ const Menu = () => {
     <div className="hidden md:flex justify-center md:text-sm lg:text-lg gap-3 text-customBlue">
       <div className="group inline-block relative z-10">
         <div className="flex">
-          <Link href={"/"} className="p-4 group relative cursor-pointer text-xl">
+          <Link href={`/${locale}`} className="p-4 group relative cursor-pointer text-xl">
             {t("home")}
             <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[110%] transition-transform left-2"></span>
           </Link>

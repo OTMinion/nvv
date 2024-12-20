@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 const Contact = () => {
+  const pathname = usePathname();
+  const locale = pathname.split("/")[1];
   return (
     <div className="flex flex-col mx-4">
       {/* Picture */}
@@ -16,7 +19,7 @@ const Contact = () => {
         />
         <div className="absolute ml-10 bottom-0 mb-20 flex flex-col text-white">
           <div className="flex text-lg">
-            <Link href="/">Trang chủ</Link>
+            <Link href={`/${locale}`}>Trang chủ</Link>
             <div className="mx-2 mb-4"> | </div>
             <p>Liên hệ</p>
           </div>
@@ -29,7 +32,8 @@ const Contact = () => {
       <div className="flex flex-col mt-16 mx-28">
         <h1 className="text-5xl font-bold">Kết nối với Nam Viet</h1>
         <p className="my-6 text-gray-500 w-[50%]">
-          Gửi tin nhắn cho chúng tôi để được giải đáp mọi thắc mắc về sản phẩm và dịch vụ của Nam Viet
+          Gửi tin nhắn cho chúng tôi để được giải đáp mọi thắc mắc về sản phẩm và dịch vụ của Nam
+          Viet
         </p>
       </div>
     </div>

@@ -17,7 +17,7 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://namviet.com.vn"),
+  metadataBase: new URL("https://namviet-jsc.com"),
   title: {
     default:
       "Nam Viet JSC - Nhà sản xuất thức ăn chăn nuôi hàng đầu Việt Nam | Leading Animal Feed Manufacturer in Vietnam",
@@ -86,7 +86,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
             <div className="flex flex-col">
               <div className="border-t border-customBlue mb-4 w-[97%] mx-auto opacity-40" />
               <div className="flex items-center justify-between px-5">
-                <Link href="/" title="Trang chủ Nam Viet JSC | Nam Viet JSC Homepage">
+                <Link href={`/${locale}`} title="Trang chủ Nam Viet JSC | Nam Viet JSC Homepage">
                   <Image
                     src="/images/logo.png"
                     alt="Logo Nam Viet JSC - Nhà sản xuất thức ăn chăn nuôi hàng đầu | Leading Animal Feed Manufacturer"

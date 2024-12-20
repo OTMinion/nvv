@@ -4,6 +4,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 interface StatProps {
   number: number;
@@ -30,6 +31,8 @@ const StatNumber = ({ number, label }: StatProps) => {
 
 export default function About() {
   const t = useTranslations("hero");
+  const pathname = usePathname();
+  const locale = pathname.split("/")[1];
 
   return (
     <section
@@ -65,7 +68,7 @@ export default function About() {
         </motion.p>
 
         <motion.a
-          href="/about"
+          href={`/${locale}/about`}
           className="text-customBlue underline w-fit"
           title="Tìm hiểu thêm về Nam Viet JSC"
           initial={{ opacity: 0 }}

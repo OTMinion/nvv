@@ -6,8 +6,11 @@ import React from "react";
 import { FaCircle } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const Page = () => {
+  const pathname = usePathname();
+  const locale = pathname.split("/")[1];
   const t = useTranslations("about");
   const [selectedYear, setSelectedYear] = useState("Start");
   const [imageSrc, setImageSrc] = useState("/images/base.jpg");
@@ -89,7 +92,7 @@ const Page = () => {
         >
           <div className="flex text-white text-xl">
             <Link
-              href="/"
+              href={`/${locale}`}
               className="hover:text-customRed cursor-pointer transition duration-300 text-sm md:text-base"
             >
               {t("14")}

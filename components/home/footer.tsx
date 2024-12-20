@@ -3,8 +3,11 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { FaFacebook, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
+  const locale = pathname.split("/")[1];
   const t = useTranslations("footer");
   const p = useTranslations("nav");
 
@@ -15,11 +18,11 @@ const Footer = () => {
   ];
 
   const navLinks = [
-    { name: p("home"), href: "/" },
-    { name: p("about"), href: "/about" },
-    { name: p("industries"), href: "/industries" },
-    { name: p("news"), href: "/projects" },
-    { name: p("contact"), href: "/contact" },
+    { name: p("home"), href: `/${locale}` },
+    { name: p("about"), href: `/${locale}/about` },
+    { name: p("industries"), href: `/${locale}/industries` },
+    { name: p("news"), href: `/${locale}/projects` },
+    { name: p("contact"), href: `/${locale}/contact` },
   ];
 
   const fadeInUp = {
